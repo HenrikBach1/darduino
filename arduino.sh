@@ -21,5 +21,6 @@ docker run \
     --network=host \
     --privileged \
     -e DISPLAY=$DISPLAY \
+    -v .:/home/developer/Arduino \
     $IMAGE:$ARDUINO_IDE_VERSION \
     arduino
