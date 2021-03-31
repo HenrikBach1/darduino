@@ -17,7 +17,7 @@ docker run ^
     --network=host ^
     --privileged ^
     -e DISPLAY=%DISPLAY% ^
-    -v "%PWD%":/project ^
+    -v "%cd%":/project ^
     --name arduino ^
     %IMAGE%:%ARDUINO_IDE_VERSION% ^
     arduino
