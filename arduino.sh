@@ -11,10 +11,6 @@ ARDUINO_IDE_VERSION=latest
     # -v /dev/ttyACM0:/dev/ttyACM0 \
     # -v /dev/ttyUSB0:/dev/ttyUSB0 \
     # -v /tmp/.X11-unix:/tmp/.X11-unix \
-    # -v /dev:/dev \
-    # -v $HOME/topics:/topics \
-    # -v $HOME/topics/arduino:/home/developer/Arduino \
-    # --name arduino \
     # $USER/$IMAGE:$ARDUINO_IDE_VERSION \
 docker run \
     -it \
@@ -22,5 +18,6 @@ docker run \
     --privileged \
     -e DISPLAY=$DISPLAY \
     -v .:/home/developer/Arduino \
+    --name arduino \
     $IMAGE:$ARDUINO_IDE_VERSION \
     arduino
